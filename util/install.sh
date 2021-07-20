@@ -195,7 +195,7 @@ function mn_deps {
             rm get-pip.py
         fi
         $install iproute2 || $install iproute
-        $install cgroup-tools || $install cgroup-bin
+        $install cgroup-tools
     fi
 
     echo "Installing Mininet core"
