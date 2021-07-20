@@ -184,16 +184,16 @@ function mn_deps {
                  net-tools \
                  ${PYPKG}-pexpect ${PYPKG}-tk
         # Install pip
-        $install ${PYPKG}-pip || $install ${PYPKG}-pip-whl
-        if ! ${PYTHON} -m pip -V; then
-            if [ $PYTHON_VERSION == 2 ]; then
-                wget https://bootstrap.pypa.io/2.6/get-pip.py
-            else
-                wget https://bootstrap.pypa.io/get-pip.py
-            fi
-            sudo ${PYTHON} get-pip.py
-            rm get-pip.py
-        fi
+        # $install ${PYPKG}-pip || $install ${PYPKG}-pip-whl
+        # if ! ${PYTHON} -m pip -V; then
+        #     if [ $PYTHON_VERSION == 2 ]; then
+        #         wget https://bootstrap.pypa.io/2.6/get-pip.py
+        #     else
+        #         wget https://bootstrap.pypa.io/get-pip.py
+        #     fi
+        #     sudo ${PYTHON} get-pip.py
+        #     rm get-pip.py
+        # fi
         $install iproute2 || $install iproute
         $install cgroup-tools
     fi
